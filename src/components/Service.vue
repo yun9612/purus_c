@@ -153,6 +153,7 @@ onUnmounted(() => {
           width: 100%;
           h2 {
             font-size: $medium-txt-2;
+            font-weight: bold;
           }
           p {
             font-size: $small-txt;
@@ -244,7 +245,7 @@ onUnmounted(() => {
           &:last-child {
             height: 50%;
             img {
-              height: 100%;
+              width: 50%;
               display: block;
               margin-left: auto;
             }
@@ -271,6 +272,7 @@ onUnmounted(() => {
           .txt {
             h2 {
               font-size: 20px;
+              font-weight: bold;
             }
             p {
               font-size: $small-txt;
@@ -307,6 +309,7 @@ onUnmounted(() => {
           .txt {
             h2 {
               font-size: 14px;
+              font-weight: bold;
             }
             p {
               font-size: 12px;

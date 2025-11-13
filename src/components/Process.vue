@@ -151,6 +151,7 @@ onBeforeUnmount(() => {
     .title {
       text-align: center;
       font-size: $main-title;
+      font-weight: bold;
       margin-bottom: 60px;
     }
     //슬라이드 래퍼
@@ -221,6 +222,7 @@ onBeforeUnmount(() => {
     .inner {
       .title {
         font-size: $medium-txt-2;
+        font-weight: bold;
         margin-bottom: 30px;
       }
       .slide-wrap {
@@ -250,6 +252,7 @@ onBeforeUnmount(() => {
     .inner {
       .title {
         font-size: 20px;
+        font-weight: bold;
         margin-bottom: 24px;
       }
       .slide-wrap {

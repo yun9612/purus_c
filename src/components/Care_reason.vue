@@ -118,6 +118,7 @@ onUnmounted(() => {
     text-align: center;
     h2 {
       font-size: $main-title;
+      font-weight: bold;
     }
     p {
       font-size: $medium-txt-2;
@@ -231,6 +232,7 @@ onUnmounted(() => {
     .care-title {
       h2 {
         font-size: $medium-txt-2;
+        font-weight: bold;
         margin-bottom: 15px;
       }
       p {
@@ -264,6 +266,7 @@ onUnmounted(() => {
       h2 {
         font-size: 20px;
         margin-bottom: 10px;
+        font-weight: bold;
       }
       p {
         font-size: 12px;
