@@ -80,6 +80,7 @@ onMounted(() => {
         h2 {
           color: $point-color;
           font-size: 50px;
+          font-weight: bold;
           padding: 35px 0 65px 0;
           max-width: 480px;
           line-height: 1.1;
@@ -150,6 +151,7 @@ onMounted(() => {
           }
           h2 {
             font-size: 40px;
+            font-weight: bold;
           }
         }
         .animation-txt {
@@ -178,6 +180,7 @@ onMounted(() => {
           }
           h2 {
             font-size: 36px;
+            font-weight: bold;
             padding: 15px 0 30px 0;
           }
         }
@@ -217,6 +220,7 @@ onMounted(() => {
           }
           h2 {
             font-size: $medium-txt-2;
+            font-weight: bold;
             padding: 15px 0 30px 0;
             text-align: center;
           }
@@ -263,6 +267,7 @@ onMounted(() => {
           }
           h2 {
             font-size: $medium-txt-2;
+            font-weight: bold;
             padding: 15px 20px 24px 20px;
             text-align: center;
           }
