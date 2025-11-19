@@ -26,31 +26,30 @@
     </div>
     <!-- 예약 목록 -->
     <!-- 전체 예약 -->
-    <div v-if="(calendarTab = 'list')" class="overflow-y-auto max-h-[61vh]">
+    <div v-if="calendarTab === 'list'" class="overflow-y-auto max-h-[76vh] pt-[50px]">
       <!-- 전체 예약 목록 -->
       <div
         v-for="customer in dataCustomer"
         :key="customer.id"
-        class="p-4 rounded-2xl bg-[#f1f1f1] mb-2 grid grid-cols-2 gap-2">
-        <!-- 왼쪽 목록 -->
-        <div class="flex flex-col">
-          <!-- 시간 -->
-          <div class="flex items-center mb-1">
-            <p
-              class="px-1.5 rounded-full"
-              :class="
-                customer.status === 'waiting'
-                  ? 'text-[#092857] font-bold bg-[#dce7fb]'
-                  : 'text-[#888888] bg-white'
-              ">
-              <i class="fa-solid fa-clock text-[11px]"></i>
-            </p>
-            <p
-              :class="customer.status === 'waiting' ? 'text-[#296af1] font-bold' : 'text-[#888888]'"
-              class="ml-2 text-[12px]">
-              {{ customer.date }} | {{ customer.time }}
-            </p>
-          </div>
+        class="flex flex-col p-4 rounded-2xl bg-[#f1f1f1] mb-3 gap-2">
+        <!-- 시간 -->
+        <div class="flex items-center">
+          <p
+            class="px-1.5 rounded-full"
+            :class="
+              customer.status === 'waiting'
+                ? 'text-[#092857] font-bold bg-[#dce7fb]'
+                : 'text-[#888888] bg-white'
+            ">
+            <i class="fa-solid fa-clock text-[11px]"></i>
+          </p>
+          <p
+            :class="customer.status === 'waiting' ? 'text-[#296af1] font-bold' : 'text-[#888888]'"
+            class="ml-2 text-[14px]">
+            {{ customer.date }} | {{ customer.time }}
+          </p>
+        </div>
+        <div class="grid grid-cols-2">
           <!-- 장소 -->
           <div class="flex items-center">
             <p
@@ -64,15 +63,12 @@
             </p>
             <p
               :class="customer.status === 'waiting' ? 'text-[#092857] font-bold' : 'text-[#888888]'"
-              class="ml-2 text-[12px]">
+              class="ml-2 text-[14px]">
               {{ customer.addr }}
             </p>
           </div>
-        </div>
-        <!-- 오른쪽 목록 -->
-        <div class="flex flex-col">
           <!-- 이름 -->
-          <div class="flex items-center mb-1">
+          <div class="flex items-center">
             <p
               class="px-1.5 rounded-full"
               :class="
@@ -84,13 +80,14 @@
             </p>
             <p
               :class="customer.status === 'waiting' ? 'text-[#092857]' : 'text-[#888888]'"
-              class="ml-2 text-[12px]">
+              class="ml-2 text-[14px]">
               {{ customer.name }}({{ customer.cafename }})
             </p>
           </div>
+        </div>
 
-          <!-- 모델명 -->
-          <div class="flex">
+        <!-- 모델명 -->
+        <!-- <div class="flex items-center">
             <p
               class="px-1.5 rounded-full"
               :class="
@@ -105,16 +102,16 @@
               class="ml-2 text-[12px]">
               {{ customer.model }}
             </p>
-          </div>
-        </div>
+          </div> -->
       </div>
     </div>
+    <!-- 달력 -->
+    <Calendar v-if="calendarTab === 'calendar'" />
   </div>
-   <Calendar />
 </template>
 
 <script setup>
-import Calendar from '@/components/worker/Calendar.vue';
+import Calendar from "@/components/worker/Calendar.vue";
 import customerData from "@/data/customer.json";
 import { ref } from "vue";
 
@@ -122,5 +119,4 @@ import { ref } from "vue";
 const dataCustomer = ref(customerData);
 
 const calendarTab = ref("list");
-
 </script>
