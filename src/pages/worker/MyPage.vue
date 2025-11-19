@@ -10,6 +10,7 @@
       <img
         src="/images/Editinfo.png"
         alt="기사 프로필"
+
         class="w-36 h-36 rounded-2xl object-cover" />
       <h2 class="mt-3 text-[30px] font-semibold text-[#296af1]">{{ dataWorker[0].name }}기사님</h2>
     </section>
@@ -64,15 +65,20 @@
     <div
       v-if="showCallModal"
       class="fixed inset-0 bg-black/60 backdrop-blur-[2px] flex justify-center items-center z-50"
-      @click.self="closeCallModal">
-      <div class="bg-white w-[300px] rounded-2xl shadow-lg text-center px-5 py-6">
+      @click.self="closeCallModal"
+    >
+      <div
+        class="bg-white w-[300px] rounded-2xl shadow-lg text-center px-5 py-6"
+      >
         <p class="text-[20px] text-[#000000]">고객센터</p>
 
-        <p class="mt-2 text-[30px] font-extrabold tracking-wide">010.1234.5678</p>
+        <p class="mt-2 text-[30px] font-extrabold tracking-wide">
+          010.1234.5678
+        </p>
 
         <button
           class="mt-4 w-full py-3 rounded-full bg-[#1667F2] text-white text-[16px] font-semibold flex justify-center items-center gap-2 shadow-md"
-          @click="callCenter">
+        >
           <i class="fa-solid fa-phone text-[16px]"></i>
           전화 연결
         </button>
