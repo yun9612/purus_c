@@ -41,7 +41,7 @@
     <form @submit.prevent="onSubmit" class="flex flex-col gap-10">
       <!-- 섹션3 / 서비스 상세 -->
       <div>
-        <h5 class="text-lg font-bold text-[#092857] pb-4">서비스 상세</h5>
+        <h5 class="text-lg font-bold text-[#57091c] pb-4">서비스 상세</h5>
         <textarea
           v-model="textarea"
           class="w-full border border-[rgba(0,0,0,0.3)] rounded-lg px-4 py-3 placeholder:opacity-70"
