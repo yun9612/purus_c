@@ -21,7 +21,7 @@
         <i class="fa-solid fa-bell text-[#092857] text-xl cursor-pointer"></i>
         <span
           v-if="notices"
-          class="text-[12px] px-1.5 bg-[#F12929] absolute rounded-full text-white top-[-6px] left-[11px]"
+          class="text-[12px] px-1.5 bg-[#F12929] absolute rounded-full text-white -top-1.5 left-[11px]"
         >
           {{ notices.length }}
         </span>

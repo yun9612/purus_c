@@ -28,6 +28,7 @@ import MyPage from "@/pages/worker/MyPage.vue";
 import EditInfo from "@/pages/worker/EditInfo.vue";
 import Month from "@/pages/worker/Month.vue";
 import FindAccount from "@/pages/worker/FindAccount.vue";
+import CustomerList from "@/pages/worker/CustomerList.vue";
 
 const routes = [
   { path: "/", component: Home },
@@ -71,6 +72,7 @@ const routes = [
       { path: "editinfo", component: EditInfo, name: "EditInfo" },
       { path: "month", component: Month, name: "Month" },
       { path: "findaccount", component: FindAccount, name: "FindAccount" },
+      { path: "customerlist", component: CustomerList, name: "CustomerList" },
     ],
   },
 ];

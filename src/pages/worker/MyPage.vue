@@ -26,9 +26,11 @@
         </div>
       </div>
 
-      <div class="flex flex-col items-center relative gap-2">
+      <div
+      @click="$router.push('/worker/dashboard/customerlist')"
+      class="flex flex-col items-center relative gap-2">
         <i class="fa-solid fa-table-list text-[22px] mt-1"></i>
-        <p class="text-[14px]">전체 내역 조회</p>
+        <p class="text-[14px]">나의 고객 목록</p>
 
         <!-- <span
           class="absolute -top-2 right-5 bg-red-500 text-white text-[10px] font-bold w-[18px] h-[18px] rounded-full flex justify-center items-center">

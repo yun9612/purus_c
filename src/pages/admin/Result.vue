@@ -12,28 +12,16 @@ import DashboardStats from "@/components/admin/DashboardStats.vue";
 // 통계 더미
 const stats = [
   {
-    title: "전체 예약",
-    value: "120",
-    change: "+12%",
-    icon: "fas fa-calendar-check",
-    bg: "bg-blue-100",
-    color: "text-blue-600",
+    title: "2025년 예약 내역",
+    value: "370",
+    unit: "건",
+    desc: "취소 건수 23건",
   },
   {
-    title: "전체 사용자",
-    value: "50",
-    change: "+5%",
-    icon: "fas fa-users",
-    bg: "bg-green-100",
-    color: "text-green-600",
-  },
-  {
-    title: "평균 평점",
-    value: "4.8",
-    change: "+0.2",
-    icon: "fas fa-star",
-    bg: "bg-yellow-100",
-    color: "text-yellow-600",
+    title: "2025년 누계 수입",
+    value: "34,750,000",
+    unit: "원",
+    desc: "환불 금액 -75,000원",
   },
 ];
 </script>
