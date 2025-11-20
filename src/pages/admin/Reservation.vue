@@ -7,33 +7,40 @@
 </template>
 
 <script setup>
-import DashboardStats from '@/components/admin/DashboardStats.vue';
+import DashboardStats from "@/components/admin/DashboardStats.vue";
 
+const today = new Date().toLocaleDateString("ko-KR", {
+  weekday: "long",
+  year: "numeric",
+  month: "long",
+  day: "numeric",
+});
 // 예약 더미
 const stats = [
   {
-    title: "전체 예약",
-    value: "120",
-    change: "+12%",
-    icon: "fas fa-calendar-check",
-    bg: "bg-blue-100",
-    color: "text-blue-600",
+    title: today,
+    value: "64",
+    unit: "건",
   },
   {
-    title: "전체 사용자",
-    value: "50",
-    change: "+5%",
-    icon: "fas fa-users",
-    bg: "bg-green-100",
-    color: "text-green-600",
+    title: "진행 중 작업",
+    value: "80",
+    unit: "%",
   },
   {
-    title: "평균 평점",
-    value: "4.8",
-    change: "+0.2",
-    icon: "fas fa-star",
-    bg: "bg-yellow-100",
-    color: "text-yellow-600",
+    title: "금일 결제액",
+    value: "21",
+    unit: "건",
+  },
+  {
+    title: "리뷰 현황",
+    value: "0",
+    unit: "건",
+  },
+  {
+    title: "리뷰 현황",
+    value: "30",
+    unit: "건",
   },
 ];
 </script>

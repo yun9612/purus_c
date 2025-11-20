@@ -1,17 +1,36 @@
 <template>
-  <div class="grid grid-cols-1 sm:grid-cols-3 md:grid-cols-5 gap-4 mb-6">
+  <div class="flex gap-3 mb-6">
     <div
       v-for="(card, index) in stats"
       :key="index"
-      class="first bg-white dark:bg-gray-800 rounded-3xl shadow-sm p-6 hover:shadow-lg transition-shadow">
-      <div class="flex items-center">
-        <div :class="`w-12 h-12 ${card.bg} rounded-lg flex items-center justify-center`">
-          <i :class="`${card.icon} ${card.color} text-xl`"></i>
-        </div>
-        <div class="ml-4">
-          <p class="text-gray-500 dark:text-gray-400 text-sm">{{ card.title }}</p>
-          <p class="text-2xl font-bold text-gray-800 dark:text-white">{{ card.value }}</p>
-          <span class="text-sm text-green-600 dark:text-green-400">{{ card.change }}</span>
+      class="first px-10 bg-white dark:bg-gray-800 rounded-2xl shadow-sm h-[180px] content-around py-4 hover:shadow-lg transition-shadow">
+      <div class="flex items-center flex-col text-center gap-3">
+        <div class="flex flex-col gap-1">
+          <p class="text-gray-500 text-lg font-bold">{{ card.title }}</p>
+          <p v-if="card.date" class="text-gray-500 text-xs">{{ card.date }}</p>
+          <p class="text-[#555555]">
+            <span
+              class="text-2xl font-bold text-[#296af1]"
+              :class="[
+                card.link ? 'text-2xl' : 'text-6xl leading-17',
+                card.value === '21' ? 'text-red-500' : '',
+                card.value === '3' ? 'text-red-500' : '',
+              ]">
+              {{ card.value }}
+            </span>
+            {{ card.unit }}
+          </p>
+          <p
+            v-if="card.desc"
+            :class="card.desc === '환불 금액 -75,000원' ? 'text-red-500' : ''"
+            class="text-sm mt-1 text-[#555555]">
+            {{ card.desc }}
+          </p>
+          <button
+            class="bg-[#296af1] mt-1 w-20 sm:w-[120px] text-white py-2 text-xs rounded-lg"
+            v-if="card.link">
+            {{ card.link }}
+          </button>
         </div>
       </div>
     </div>

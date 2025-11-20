@@ -7,33 +7,44 @@
 </template>
 
 <script setup>
-import DashboardStats from '@/components/admin/DashboardStats.vue';
+import DashboardStats from "@/components/admin/DashboardStats.vue";
 
+const today = new Date().toLocaleDateString("ko-KR", {
+  weekday: "long",
+  year: "numeric",
+  month: "long",
+  day: "numeric",
+});
 // 통계카드 더미
 const stats = [
   {
-    title: "전체 예약",
-    value: "120",
-    change: "+12%",
-    icon: "fas fa-calendar-check",
-    bg: "bg-blue-100",
-    color: "text-blue-600",
+    title: "오늘 신규 예약",
+    date: today,
+    value: "8",
+    unit: "건",
+    desc: "",
+    link: "",
   },
   {
-    title: "전체 사용자",
-    value: "50",
-    change: "+5%",
-    icon: "fas fa-users",
-    bg: "bg-green-100",
-    color: "text-green-600",
+    title: "진행 중 작업",
+    value: "64",
+    unit: "건",
+    desc: "처리 완료 12건",
+    link: "예약 관리",
   },
   {
-    title: "평균 평점",
+    title: "금일 결제액",
+    value: "156,000",
+    unit: "원",
+    desc: "결제 취소 1건 24,000원",
+    link: "매출결산",
+  },
+  {
+    title: "리뷰 현황",
     value: "4.8",
-    change: "+0.2",
-    icon: "fas fa-star",
-    bg: "bg-yellow-100",
-    color: "text-yellow-600",
+    unit: "점",
+    desc: "리뷰 작성률 63%",
+    link: "고객 리뷰 관리",
   },
 ];
 </script>
